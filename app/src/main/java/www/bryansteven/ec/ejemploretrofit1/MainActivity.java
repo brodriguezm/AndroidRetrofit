@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         //new ConsumeService().execute();
 
-        //Llamada asincrona 
+        //Llamada asincrona
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://androidtutorials.herokuapp.com/")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         response.enqueue(new Callback<Persona>() {
             @Override
             public void onResponse(Call<Persona> call, Response<Persona> response) {
-                Log.d("Nombre  ", response.body().getName());
+                Log.d("Nombre Persona ", response.body().getName());
             }
 
             @Override
